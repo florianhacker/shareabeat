@@ -1,0 +1,347 @@
+<!doctype html>
+<html>
+<head>
+	<title>SHARE A BEAT</title>
+	<link type="text/css" rel="stylesheet" href="css/styles.css" media="screen">
+	<link type="text/css" rel="stylesheet" href="css/style.css" media="screen">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script src="http://connect.soundcloud.com/sdk.js" type="text/JavaScript"></script>
+	<script src="js/record.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/libs/swfobject.js"></script>
+	<script src="js/libs/studiojs/Studio.js"></script>
+	<script src="js/libs/studiojs/components/Mixer.js"></script>
+	<script src="js/libs/studiojs/service/BufferLoader.js"></script>
+	<script src="js/libs/studiojs/components/DrumMachine.js"></script>
+	<script src="js/libs/studiojs/components/effects/Filter.js"></script>
+	<script src="js/gup.js"></script>
+	<script src="js/clickhandlers.js"></script>
+	<script src="js/base.js"></script>
+	<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+	<script src="js/libs/soundcloud.player.api.js"></script>
+	
+	<meta property="og:title" content="Share A Beat" />
+	<meta property="og:description" content="Create a Drumpattern and start singing!" />
+</head>
+
+<body>
+	<script>
+
+	</script>
+	
+	<div id="drummachine">
+		
+	<a href="#" id="fb-button">Facebook</a>
+
+	<div class="speed">
+		<div class="bpm-wrap">
+			<input type="number" id="bpm" min="80" max="300" step="5" value="90">
+		</div>
+		<div class="indicator"></div>
+		<div class="indicator"></div>
+		<div class="indicator"></div>
+		<div class="indicator"></div>
+		<div class="indicator"></div>
+		<div class="indicator"></div>
+		<div class="indicator"></div>
+		<div class="indicator"></div>
+		<div class="indicator"></div>
+		<div class="indicator"></div>
+		<div class="indicator"></div>
+		<div class="indicator"></div>
+		<div class="indicator"></div>
+		<div class="indicator"></div>
+		<div class="indicator"></div>
+		<div class="indicator"></div>
+	</div>
+	<section>
+			
+
+			
+			<ul class="channel">
+				
+				<li class="sampleselect">
+					<select>
+					  <option value="1">Kick 1</option>
+					  <option value="2">Kick 2</option>
+					  <option value="3">Kick 3</option>
+					  <option value="4">Kick 4</option>
+					</select>
+				</li>
+				<li class="sequence" data-index="1">
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>			
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>			
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>			
+					<div class="beat"></div>			
+				</li>
+				<li class="volume">
+					<input type="range" class="volume" min="0" max="1" step="0.1" value="0">
+				</li>
+			</ul>
+
+			<ul class="channel">
+	
+				<li class="sampleselect">
+					<select>
+					  <option value="1">Snare 1</option>
+					  <option value="2">Snare 2</option>
+					  <option value="3">Snare 3</option>
+					  <option value="4">Snare 4</option>
+					</select>
+				</li>
+				<li class="sequence" data-index="2">
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>			
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>		
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>			
+					<div class="beat"></div>			
+				</li>
+				<li class="volume">
+					<input type="range" class="volume" min="0" max="1" step="0.1" value="0.8">							
+				</li>
+			</ul>
+
+			<ul class="channel">
+	
+				<li class="sampleselect">
+					<select>
+					  <option value="1">Sample1</option>
+					  <option value="2">Sample2</option>
+					  <option value="3">Sample3</option>
+					  <option value="4">Sample4</option>
+					</select>
+				</li>
+				<li class="sequence" data-index="3">
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>			
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>			
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>			
+					<div class="beat"></div>			
+				</li>
+				<li class="volume">
+					<input type="range" class="volume" min="0" max="1" step="0.1" value="0.8">								
+				</li>
+			</ul>
+
+			<ul class="channel">
+		
+				<li class="sampleselect">
+					<select>
+					  <option value="1">Sample1</option>
+					  <option value="2">Sample2</option>
+					  <option value="3">Sample3</option>
+					  <option value="4">Sample4</option>
+					</select>
+				</li>
+				<li class="sequence" data-index="4">
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>			
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>			
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>			
+					<div class="beat"></div>		
+				</li>
+				<li class="volume">
+					<input type="range" class="volume" min="0" max="1" step="0.1" value="0.8">								
+				</li>
+			</ul>
+			<ul class="channel">
+	
+				<li class="sampleselect">
+					<select>
+					  <option value="1">Sample1</option>
+					  <option value="2">Sample2</option>
+					  <option value="3">Sample3</option>
+					  <option value="4">Sample4</option>
+					</select>
+				</li>
+				<li class="sequence" data-index="5">
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>			
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>			
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>			
+					<div class="beat"></div>			
+				</li>
+				<li class="volume">
+					<input type="range" class="volume" min="0" max="1" step="0.1" value="0.8">							
+				</li>
+			</ul>
+
+			<ul class="channel">
+		
+				<li class="sampleselect">
+					<select>
+					  <option value="1">Sample1</option>
+					  <option value="2">Sample2</option>
+					  <option value="3">Sample3</option>
+					  <option value="4">Sample4</option>
+					</select>
+				</li>
+				<li class="sequence" data-index="6">
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>			
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>			
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>
+					<div class="beat"></div>			
+					<div class="beat"></div>			
+				</li>
+				<li class="volume">
+					<input type="range" class="volume" min="0" max="1" step="0.1" value="0.8">								
+				</li>
+			</ul>	
+		</section>
+	
+		<aside>
+			<ul id="master-settings" class="channel">
+				<input type="range" class="master volume" min="0" max="1" step="0.05" value="0.8">
+			</ul>
+		</aside>
+		
+	</div>
+		
+	
+	<div class="controls global">
+		<ol>
+			<li id="playbutton">
+				<div class="play"></div>
+				<span>Play</span>
+			</li>
+			<li id="stopbutton">
+				<div class="stop"></div>
+				<span>Stop</span>
+			</li>															
+		</ol>
+		<input type="number" id="bpm" min="80" max="300" step="5" value="90" />
+	</div>	
+	
+	<div id="main-control">
+		<div class="controls">
+		<ol>
+			<p>Record Voice</p>
+			<li id="recordbutton" class="red">
+				<div class="record"></div>
+			</li>
+		</ol>
+		</div>		
+		<div class="pcm">
+			<div id='flash-wrapper'>			
+				<div id="myContent"></div>
+				<aside>
+					<input type="range" class="vocal-volume" min="0" max="1" step="0.05" value="0">
+				</aside>
+			</div>
+			<div class='guidelines'>
+				<p class='micaccess'>Please allow Flash to access your mic</p>
+				<p class='rapnow'>RAP NOW! (YOU ARE BEING RECORDED)</p>
+				<p class='loadsoundcloud'>Please log into soundcloud to upload your track</p>
+				<img id="loading" src="img/loading_circle.gif" width="50" height="50" alt="Loading Circle" />
+			</div>
+			<!-- <canvas></canvas> -->
+		</div>
+
+	</div>
+	
+
+	</div>
+	
+
+
+	<a id="fb" href="http://www.facebook.com/sharer.php?" target="_blank">Share on Facebook</a>
+			
+
+			
+	<script>
+		
+	var flashvars = {
+	  enable_api: "true", 
+	theme_color: "000000",
+	uying : false,
+	sharing	: false,
+	download : false,
+	show_bpm : false,
+	show_playcount : false,
+	  object_id: "myPlayer",
+	  url: "http://soundcloud.com/florianhacker/atestrecord-5"
+	};
+	var params = {
+	  allowscriptaccess: "always",
+	  wmode : "opaque"
+	};
+	var attributes = {
+	  id: "myPlayer",
+	  name: "myPlayer"
+	};
+	
+	swfobject.embedSWF("http://player.soundcloud.com/player.swf", "myContent", "650px", "80px", "9.0.0","expressInstall.swf", flashvars, params, attributes);
+	
+	</script>
+	
+	
+</body>
+</html>
+
